@@ -1,0 +1,35 @@
+@import "../font/font.css";
+//dinamic change variables=========>
+:root{
+  --multiply:1;
+  //var(--multiply) <=== copy this
+}
+
+//stattic scss compiling variables========>
+$pink:#FEF7E5;
+$violet:#6F1EAA;
+$lightViolet:#C282F0;
+$orange:#F7A500;
+$lightOrange:#FFF7C2;
+$blue:#DFF5F6;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto-Regular, sans-serif;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.navbar{
+  width: 84.722vw;
+  margin: 0 auto;
+}
