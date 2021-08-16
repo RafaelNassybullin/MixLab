@@ -1,6 +1,6 @@
 @import "../font/font.css";
 :root {
-  --multiply:1;
+  --multiply: 1;
 }
 
 * {
@@ -9,19 +9,242 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background: palegreen;
+}
+
 body {
   font-family: Roboto-Regular, sans-serif;
 }
 
-.container {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 15px;
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #6F1EAA;
+}
+
+header {
+  background: white;
+  height: 6.597vw;
+  display: flex;
+  align-items: center;
 }
 
 .navbar {
   width: 84.722vw;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.navbar ul {
+  display: flex;
+  z-index: 2;
+}
+.navbar ul li {
+  margin: 0 0.972vw;
+  font-size: 1.25vw;
+  cursor: pointer;
+}
+.navbar .logo {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .logo img {
+  height: 2.639vw;
+}
+.navbar .login-nav {
+  z-index: 2;
+  font-size: 1.25vw;
+  display: flex;
+  align-items: center;
+}
+.navbar .login-nav a {
+  margin: 0 0.972vw;
+  cursor: pointer;
+}
+
+.try-nav {
+  margin: 0 0.972vw;
+  font-family: Roboto-Bold, sans-serif;
+  font-size: 1.25vw;
+  background: #6F1EAA;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.694vw 2.986vw;
+  border-radius: 1.736vw;
+  cursor: pointer;
+}
+
+main {
+  background: #FEF7E5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+main .main-title {
+  margin: 7.708vw 0 17.014vw 0;
+  width: 43.667vw;
+  font-family: Roboto-Regular, sans-serif;
+  font-weight: 500;
+}
+main .main-title h1 {
+  font-size: 3.819vw;
+  line-height: 4.653vw;
+  font-family: Roboto-Regular, sans-serif;
+  font-weight: 400;
+}
+main .main-title p {
+  font-size: 1.389vw;
+  margin: 2.639vw 0;
+  line-height: 1.944vw;
+}
+main .right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 90%;
+  width: 13.819vw;
+}
+main .left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 8.194vw;
+  height: 80%;
+}
+main .center {
+  position: absolute;
+  left: 45%;
+  bottom: 0;
+  width: 24.306vw;
+  height: 17.639vw;
+}
+
+.number-one-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 84.722vw;
+  margin: 0 auto;
+  padding: 4.514vw 2.778vw;
+}
+
+.text-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 39.583vw;
+  padding-right: 5.208vw;
+}
+.text-image h2 {
+  font-size: 3.056vw;
+  margin-bottom: 2.639vw;
+  font-weight: 400;
+}
+.text-image .image {
+  width: 19.444vw;
+  height: 26.181vw;
+  position: relative;
+}
+.text-image .image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.credo {
+  padding-left: 7.292vw;
+}
+.credo .cards h3 {
+  color: #6F1EAA;
+  font-size: 1.667vw;
+  margin-bottom: 2.014vw;
+}
+.credo .cards p {
+  font-size: 1.25vw;
+  line-height: 1.944vw;
+}
+.credo .cards .ps {
+  margin-top: 1.389vw;
+}
+
+.border {
+  width: 100%;
+  height: 0.069vw;
+  background: #F7A500;
+  margin: 2.431vw 0;
+}
+
+.how-works-wrap {
+  width: 84.722vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 4.514vw 3.333vw;
+}
+.how-works-wrap .how-works-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0 1.25vw;
+}
+.how-works-wrap .how-works-card h3 {
+  font-size: 1.667vw;
+  color: #6F1EAA;
+  margin: 2.222vw 0 0.833vw 0;
+  font-weight: 400;
+}
+.how-works-wrap .how-works-card p {
+  font-size: 1.25vw;
+  line-height: 1.944vw;
+}
+
+.how-we-work {
+  background: #FAF9F6;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  padding: 4.514vw 0;
+}
+.how-we-work h1 {
+  font-size: 3.056vw;
+  text-align: center;
+  font-weight: 400;
+}
+
+.circle-in-image {
+  width: 13.333vw;
+  height: 13.333vw;
+  background: #FFF7C2;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.circle-in-image .image {
+  width: 15.556vw;
+}
+.circle-in-image .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.circle-in-image .image:last-child {
+  transform: translateY(-0.694vw);
 }
 
 /*# sourceMappingURL=main.css.map */
