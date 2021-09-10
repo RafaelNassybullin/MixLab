@@ -15,16 +15,16 @@ let swiper = new Swiper(".mySwiper", {
 
 let tl = gsap.timeline();
 
-window.innerWidth<1050 ? burger.addEventListener('click', () => {
+burger.addEventListener('click', () => {
     if (tl.reversed()) {
         tl.play();
     } else {
         tl.to('.navbar ul', {bottom: '0', display: 'flex'}, '-=.3')
             .to('.navbar ul li', {opacity: 1, pointerEvents: 'all', stagger: .2}, '0.3')
     }
-}):''
+})
 
-window.innerWidth<1050 ?close.addEventListener('click', () => {
+close.addEventListener('click', () => {
     tl.reverse();
-}):'';
+})
 
